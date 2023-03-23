@@ -98,7 +98,7 @@ function Scene({ portal, ...props }) {
             </Mask>
             <mesh
               onWheel={(e) => {
-                wheel.current = -e.deltaY / 2
+                wheel.current = -e.deltaY / -0.5
                 // Simple defer to reset wheel offset since the browser will never let delta be zero
                 clearTimeout(timeout)
                 timeout = setTimeout(() => (wheel.current = 0), 100)
